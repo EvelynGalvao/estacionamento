@@ -1,4 +1,4 @@
 package br.com.estacionamento.estacionamento.controller.dto;
 
-public class CadastroVeiculosDto {
+public class EstabelecimentoDto {
 }
