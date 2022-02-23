@@ -1,16 +1,16 @@
 package br.com.estacionamento.estacionamento.controller.dto;
 
 import br.com.estacionamento.estacionamento.model.Veiculo;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.autoconfigure.amqp.ConnectionFactoryCustomizer;
+import org.springframework.jca.cci.connection.ConnectionFactoryUtils;
 
 import java.sql.*;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
-public class VeiculosDto {
-
-    private Connection connection;
+public class VeiculosDto<connection> {
 
     String Id;
     String Marca;
@@ -19,20 +19,8 @@ public class VeiculosDto {
     String Placa;
     String Tipo;
 
-    public VeiculosDto() {
 
-        this.connection = new ConnectionFactory().getConnection();
-    }
-
-    public void adiciona(Veiculo veiculo) {
 
 
     }
 
-    private class ConnectionFactory {
-        public Connection getConnection() {
-
-            return null;
-        }
-    }
-}
