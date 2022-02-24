@@ -23,7 +23,7 @@ public class Veiculo {
         //Placa = placa;
         //Tipo = tipo;
 
-    public Veiculo(){
+    public Veiculo(String marca, String modelo, String cor, String placa, String tipo){
     }
 
     public String getMarca() {
