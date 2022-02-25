@@ -1,5 +1,5 @@
 package br.com.estacionamento.estacionamento.model;
-import javax.persistence.Entity;
+import  javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,6 +24,14 @@ public class Veiculo {
         //Tipo = tipo;
 
     public Veiculo(String marca, String modelo, String cor, String placa, String tipo){
+        this.Marca = marca;
+        this.Modelo = modelo;
+        this.Cor = cor;
+        this.Placa =  placa;
+        this.Tipo = tipo;
+
+
+
     }
 
     public String getMarca() {

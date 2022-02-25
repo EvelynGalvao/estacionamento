@@ -1,5 +1,9 @@
 package br.com.estacionamento.estacionamento.controller.form;
 
+import br.com.estacionamento.estacionamento.model.Veiculo;
+import br.com.estacionamento.estacionamento.repository.VeiculoRepository;
+
+import public class Veiculo;
 public class VeiculoForm {
 
     private String Marca;
@@ -7,6 +11,9 @@ public class VeiculoForm {
     private String Cor;
     private String Placa;
     private String Tipo;
+
+
+
 
     public String getMarca() {
         return Marca;
@@ -46,5 +53,12 @@ public class VeiculoForm {
 
     public void setTipo(String tipo) {
         Tipo = tipo;
+    }
+    public Veiculo converter(VeiculoRepository veiculoRepository) {
+        String nomeVeiculo;
+        Veiculo veiculo = veiculoRepository.findByVeiculoNome(nomeVeiculo);
+        return new Veiculo(Marca, Modelo, Cor, Placa, Tipo);
+
+
     }
 }
