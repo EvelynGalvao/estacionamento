@@ -9,11 +9,11 @@ public class Veiculo {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private String Marca;
-    private String Modelo;
-    private String Cor;
-    private String Placa;
-    private String Tipo;
+    private String marca;
+    private String modelo;
+    private String cor;
+    private String placa;
+    private String tipo;
 
    // public Veiculo( String marca, String modelo, String cor, String placa, String tipo) {
 
@@ -24,53 +24,53 @@ public class Veiculo {
         //Tipo = tipo;
 
     public Veiculo(String marca, String modelo, String cor, String placa, String tipo){
-        this.Marca = marca;
-        this.Modelo = modelo;
-        this.Cor = cor;
-        this.Placa =  placa;
-        this.Tipo = tipo;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cor = cor;
+        this.placa =  placa;
+        this.tipo = tipo;
 
 
 
     }
 
     public String getMarca() {
-        return Marca;
+        return marca;
     }
 
     public void setMarca(String marca) {
-        Marca = marca;
+        this.marca = marca;
     }
 
     public String getModelo() {
-        return Modelo;
+        return modelo;
     }
 
     public void setModelo(String modelo) {
-        Modelo = modelo;
+        this.modelo = modelo;
     }
 
     public String getCor() {
-        return Cor;
+        return cor;
     }
 
     public void setCor(String cor) {
-        Cor = cor;
+        this.cor = cor;
     }
 
     public String getPlaca() {
-        return Placa;
+        return placa;
     }
 
     public void setPlaca(String placa) {
-        Placa = placa;
+        this.placa = placa;
     }
 
     public String getTipo() {
-        return Tipo;
+        return tipo;
     }
 
     public void setTipo(String tipo) {
-        Tipo = tipo;
+        this.tipo = tipo;
     }
 }
