@@ -29,11 +29,9 @@ public class VeiculoController {
     }
 
     @PostMapping
-    public void cadastrar(@NotNull @RequestBody VeiculoForm form) {
+    public void cadastrar(
 
-       Veiculo veiculo = form.converter();
 
-        veiculorepository.save(veiculo);
 
     }
 }

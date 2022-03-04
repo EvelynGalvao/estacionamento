@@ -7,11 +7,11 @@ import java.util.List;
 public class VeiculoDto<connection> {
 
     String Id;
-    String Marca;
-    String Modelo;
-    String Cor;
-    String Placa;
-    String Tipo;
+    String marca;
+    String modelo;
+    String cor;
+    String placa;
+    String tipo;
 
 
     public static List<VeiculoDto> converter(List<Veiculo> asList) {
