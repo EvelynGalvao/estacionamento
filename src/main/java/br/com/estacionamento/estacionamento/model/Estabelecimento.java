@@ -7,12 +7,12 @@ public class Estabelecimento {
     private Long id;
 
 
-    private String Nome;
-    private String CNPJ;
-    private String Endereco;
-    private int Telefone;
-    private int QuantidadeVagasMotos;
-    private int QuantidadeVagasCarros;
+    private String nome;
+    private String cnpj;
+    private String endereco;
+    private int telefone;
+    private int quantidadeVagasMotos;
+    private int quantidadeVagasCarros;
 
     public Long getId() {
         return id;
@@ -26,50 +26,50 @@ public class Estabelecimento {
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
-    public String getCNPJ() {
-        return CNPJ;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public void setCNPJ(String CNPJ) {
-        this.CNPJ = CNPJ;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public int getTelefone() {
-        return Telefone;
+        return telefone;
     }
 
     public void setTelefone(int telefone) {
-        Telefone = telefone;
+        this.telefone = telefone;
     }
 
     public String getEndereco() {
-        return Endereco;
+        return endereco;
     }
 
     public void setEndereco(String endereco) {
-        Endereco = endereco;
+        this.endereco = endereco;
     }
 
     public int getQuantidadeVagasMotos() {
-        return QuantidadeVagasMotos;
+        return quantidadeVagasMotos;
     }
 
     public void setQuantidadeVagasMotos(int quantidadeVagasMotos) {
-        QuantidadeVagasMotos = quantidadeVagasMotos;
+        this.quantidadeVagasMotos = quantidadeVagasMotos;
     }
 
     public int getQuantidadeVagasCarros() {
-        return QuantidadeVagasCarros;
+        return quantidadeVagasCarros;
     }
 
     public void setQuantidadeVagasCarros(int quantidadeVagasCarros) {
-        QuantidadeVagasCarros = quantidadeVagasCarros;
+        this.quantidadeVagasCarros = quantidadeVagasCarros;
     }
 }
