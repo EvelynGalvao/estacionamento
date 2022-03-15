@@ -1,7 +1,7 @@
 package br.com.estacionamento.estacionamento.controller;
 
 import br.com.estacionamento.estacionamento.controller.dto.VeiculoDto;
-import br.com.estacionamento.estacionamento.controller.form.VeiculoForm;
+
 import br.com.estacionamento.estacionamento.model.Veiculo;
 import br.com.estacionamento.estacionamento.repository.VeiculoRepository;
 import org.jetbrains.annotations.NotNull;
@@ -13,28 +13,30 @@ import java.util.List;
 @RestController
 @RequestMapping("/veiculo")
 public class VeiculoController {
-
     @Autowired
-    private VeiculoRepository veiculorepository;
+    VeiculoRepository repository;
 
-    @GetMapping
-    public List<VeiculoDto> lista(String nomeVeiculo) {
-        if (nomeVeiculo == null) {
-            List<Veiculo> veiculos = veiculorepository.findAll();
-            return VeiculoDto.converter(veiculos);
-        } else {
-            List<Veiculo> veiculos = veiculorepository.findByVeiculoNome(nomeVeiculo);
-            return VeiculoDto.converter(veiculos);
-        }
+  @GetMapping("/veiculo")
+    public List<Veiculo> getAllVeiculos(){
+      return repository.findAll();
+  }
+  @GetMapping("/veiculo/{id}")
+  public Veiculo getVeiculoById(@PathVariable Long id){
+      return repository.getById(id);
+  }
+  @PostMapping("/veiculo")
+    public Veiculo saveVeiculo(@RequestBody Veiculo veiculo){
+      return repository.save(veiculo);
+  }
+  @DeleteMapping("/veiculo/{id}")
+    public void deleteVeiculo(@PathVariable Long id){
+      repository.deleteById(id);
+  }
+
+
+
     }
 
-    @PostMapping
-    public void cadastrar(
-
-
-
-    }
-}
 
 
 

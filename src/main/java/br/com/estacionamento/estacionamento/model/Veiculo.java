@@ -1,11 +1,19 @@
 package br.com.estacionamento.estacionamento.model;
+import jdk.jfr.DataAmount;
+
 import  javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+
 @Entity
+
+
+
 public class Veiculo {
+
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
@@ -15,15 +23,9 @@ public class Veiculo {
     private String placa;
     private String tipo;
 
-   // public Veiculo( String marca, String modelo, String cor, String placa, String tipo) {
 
-        //Marca = marca;
-        //Modelo = modelo;
-        //Cor = cor;
-        //Placa = placa;
-        //Tipo = tipo;
-
-    public Veiculo(String marca, String modelo, String cor, String placa, String tipo){
+    public Veiculo(Long id, String marca, String modelo) {
+        Id = id;
         this.marca = marca;
         this.modelo = modelo;
         this.cor = cor;
